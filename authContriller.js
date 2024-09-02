@@ -53,7 +53,7 @@ class authController {
         res.status(400).json({ message: "неверній пароль" });
       }
       // токен
-      const token = generateAccessToken(user._id, user.role);
+      const token = generateAccessToken(user._id);
       // возвращаем токен на клиент
       return res.json({ token });
 
